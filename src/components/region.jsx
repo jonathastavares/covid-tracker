@@ -1,37 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const Region = ({ region }) => {
   const {
     name,
-    source,
   } = region;
-  const todayNewConfirmed = region.today_new_confirmed;
-  const todayNewDeaths = region.today_new_deaths;
+  const totalConfirmed = region.today_confirmed;
   return (
     <Card key={name} className="col-sm-12 col-lg-6 col-xl-3 text-center">
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">
-          Cases confirmed:
-          <span className="fw-bold">
-            {todayNewConfirmed}
-          </span>
-        </Card.Subtitle>
-        <Card.Subtitle className="mb-2 text-muted">
-          Cases confirmed deaths:
-          <span className="fw-bold">
-            {todayNewDeaths}
-          </span>
-        </Card.Subtitle>
-        <Card.Subtitle className="mb-2 text-muted">
-          Information source:
-          <span className="fw-bold">
-            {source}
-          </span>
-        </Card.Subtitle>
-      </Card.Body>
+      <Link to="/details" className="links align-middle" state={{ region }}>
+        <Card.Body>
+          <Card.Title className="fw-bold text-white">{name}</Card.Title>
+          <Card.Subtitle className="mb-2 text-white">
+            Total cases confirmed:
+            <span className="fw-bold">
+              {totalConfirmed}
+            </span>
+          </Card.Subtitle>
+        </Card.Body>
+      </Link>
     </Card>
   );
 };
@@ -39,19 +28,13 @@ const Region = ({ region }) => {
 Region.defaultProps = {
   region: {
     name: '',
-    todayNewConfirmed: '',
-    todayNewDeaths: '',
-    source: '',
+    todayConfirmed: '',
   },
 };
 Region.propTypes = {
   region: PropTypes.shape({
     name: PropTypes.string,
-    todayNewConfirmed: PropTypes.number,
-    today_new_confirmed: PropTypes.number,
-    today_new_deaths: PropTypes.number,
-    todayNewDeaths: PropTypes.number,
-    source: PropTypes.string,
+    today_confirmed: PropTypes.number,
   }),
 };
 export default Region;

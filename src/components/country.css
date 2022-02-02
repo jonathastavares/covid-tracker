@@ -1,3 +1,23 @@
 .country {
-    height: 100vh;
+  height: 100vh;
+}
+
+.card {
+  background-color: #54bbb4 !important;
+}
+
+.country-card {
+  background-color: #239089 !important;
+  background-image: url(../assets/images/Brazil_map.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.input-box {
+  background-color: #239089 !important;
+}
+
+.input-box::placeholder {
+  color: white;
 }
