@@ -10,7 +10,6 @@ import {
 import { getData } from './redux/data/country';
 import Country from './components/country';
 import Regions from './components/regions';
-import Region from './components/region';
 
 const baseURL = 'https://api.covid19tracking.narrativa.com';
 
@@ -32,11 +31,20 @@ function App() {
   };
   const date = `${year}-${month()}-${day()}`;
   const link = `${baseURL}/api/${date}/country/brazil`;
-
   useEffect(() => {
     dispatch(getData(link));
   }, []);
 
+  const [show, setShow] = React.useState(false);
+
+  React.useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShow(true);
+    }, 3000);
+    return () => clearTimeout(timeout);
+  }, [show]);
+
+  if (!show) return <div>Content loading, please wait!</div>;
   return (
     <Router>
       <nav className="d-flex">
@@ -59,7 +67,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Country />} />
         <Route path="regions" element={<Regions />} />
-        <Route path="/region" element={<Region />} />
       </Routes>
     </Router>
   );

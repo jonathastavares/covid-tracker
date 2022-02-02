@@ -1,25 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import Region from './region';
 
-const Regions = ({ regions }) => {
-  console.log(regions);
+const Regions = () => {
+  const data = useSelector((state) => state.countryReducer);
   return (
-    <div>Regions loaded!</div>
+    <div className="grid row">
+      {data.slice(1).map((region) => (
+        <Region key={region.name} region={region} />
+      ))}
+    </div>
   );
-};
-
-Regions.defaultProps = {
-  mission: {
-    name: '',
-    link: '',
-  },
-};
-
-Regions.propTypes = {
-  mission: PropTypes.shape({
-    name: PropTypes.string,
-    link: PropTypes.string,
-  }),
 };
 
 export default Regions;
