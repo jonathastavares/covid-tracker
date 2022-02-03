@@ -9,6 +9,9 @@ export const getData = (countryURL) => (dispatch) => axios.get(countryURL).then(
     const payload = res[0][1].dates;
     const country = Object.values(payload)[0].countries;
     const { regions } = Object.values(country)[0];
+    for (let i = 0; i < regions.length; i += 1) {
+      regions[i].id = i;
+    }
     dispatch({ type: GET_DATA_SUCCESS, country: [country], regions });
   },
 );

@@ -6,12 +6,20 @@
   background-color: #54bbb4 !important;
 }
 
+.card-dark {
+  background-color: #4bb0a9 !important;
+}
+
 .country-card {
   background-color: #239089 !important;
   background-image: url(../assets/images/Brazil_map.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
+}
+
+.details-card {
+  background-color: #239089 !important;
 }
 
 .input-box {

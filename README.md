@@ -6,7 +6,7 @@
 
 This is a covid tracker app where you can find latest information about COVID in Brazil, total number of cases, today new confirmed cases and deaths and more, you can also search by state and check specific information about any state of Brazil.
 
-Our development flow included: performing git flow practices & using components with routers, life cycle methods,handling events and state management by Redux store,actions, reducers in [duck Patern](https://github.com/erikras/ducks-modular-redux) with unit and component tests.
+My development flow included: performing git flow practices & using components with routers, life cycle methods,handling events and state management by Redux store,actions, reducers in [duck Pattern](https://github.com/erikras/ducks-modular-redux) with unit and component tests.
 
 ## Built With
 
@@ -47,11 +47,11 @@ cd <your_desktop>
 ```
 
 ```
-git clone git@github.com:yigitm/react-group-project.git
+git clone git@github.com:jonathastavares/covid-tracker.git
 ```
 
 ```
-cd react-group-project
+cd covid-tracker
 ```
 
 ### Usage
@@ -105,6 +105,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
+-[Nelson Sakwa](https://www.behance.net/sakwadesignstudio) - Design
 
 ## 📝 License
 

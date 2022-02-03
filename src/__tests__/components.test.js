@@ -7,7 +7,7 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import App from '../App';
 import Region from '../components/region';
-import data from './__mocks__/data';
+import data from '../mocks/data';
 
 describe('Testing Components Render and User Interaction: ', () => {
   const region = {

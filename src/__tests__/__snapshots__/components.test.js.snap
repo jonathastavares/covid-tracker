@@ -97,7 +97,8 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="col-sm-12 col-lg-6 col-xl-3 text-center card"
+        class="col-6 col-xl-3 text-center card-dark card"
+        id="card"
       >
         <a
           class="links align-middle"
@@ -114,7 +115,7 @@ Object {
             <div
               class="mb-2 text-white card-subtitle h6"
             >
-              Total cases confirmed:
+              Total cases:
               <span
                 class="fw-bold"
               >
@@ -128,7 +129,8 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="col-sm-12 col-lg-6 col-xl-3 text-center card"
+      class="col-6 col-xl-3 text-center card-dark card"
+      id="card"
     >
       <a
         class="links align-middle"
@@ -145,7 +147,7 @@ Object {
           <div
             class="mb-2 text-white card-subtitle h6"
           >
-            Total cases confirmed:
+            Total cases:
             <span
               class="fw-bold"
             >
