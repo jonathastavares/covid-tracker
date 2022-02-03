@@ -22,7 +22,7 @@ My development flow included: performing git flow practices & using components w
 
 ## Presentation video
 
-[Watch video](https://www.loom.com/share/bff86c2832e348889c00439235d390d7)
+[Watch video](https://www.loom.com/share/a05a6f728ab743dc8ac6c74eeadee1f5)
 
 ## Getting Started
 
