@@ -13,7 +13,7 @@ const Regions = () => {
     setInput(e.target.value);
   };
   const filtered = data.slice(1).filter(
-    (entry) => String(entry.name).toLowerCase().includes(input),
+    (entry) => String(entry.name).toLowerCase().includes(String(input).toLowerCase()),
   );
   const regions = filtered;
   return (
