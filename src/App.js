@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import './App.css';
 import { useDispatch } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -11,6 +10,7 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { getData } from './redux/data/country';
 import Regions from './components/regions';
 import Details from './components/details';
+import './App.css';
 
 const baseURL = 'https://api.covid19tracking.narrativa.com';
 
